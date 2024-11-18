@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3D2774132CE7CCF40010A19E /* CarPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2774122CE7CCF40010A19E /* CarPlay.framework */; platformFilter = ios; };
+		3D2774152CE7CCFC0010A19E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D2774142CE7CCFC0010A19E /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3D5CA1002CE640CC0051B53A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,25 +29,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3D5CA0EC2CE640CB0051B53A /* My Trips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Trips.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D5CA0FF2CE640CC0051B53A /* My TripsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My TripsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D5CA1092CE640CC0051B53A /* My TripsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My TripsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D2774122CE7CCF40010A19E /* CarPlay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CarPlay.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.1.sdk/System/Library/Frameworks/CarPlay.framework; sourceTree = DEVELOPER_DIR; };
+		3D2774142CE7CCFC0010A19E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.1.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		3D5CA0EC2CE640CB0051B53A /* MyTrips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTrips.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D5CA0FF2CE640CC0051B53A /* MyTripsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTripsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D5CA1092CE640CC0051B53A /* MyTripsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTripsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3D2774182CE7CFF70010A19E /* Exceptions for "MyTrips" folder in "MyTrips" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3D5CA0EB2CE640CB0051B53A /* MyTrips */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		3D5CA0EE2CE640CB0051B53A /* My Trips */ = {
+		3D5CA0EE2CE640CB0051B53A /* MyTrips */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "My Trips";
+			exceptions = (
+				3D2774182CE7CFF70010A19E /* Exceptions for "MyTrips" folder in "MyTrips" target */,
+			);
+			path = MyTrips;
 			sourceTree = "<group>";
 		};
-		3D5CA1022CE640CC0051B53A /* My TripsTests */ = {
+		3D5CA1022CE640CC0051B53A /* MyTripsTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "My TripsTests";
+			path = MyTripsTests;
 			sourceTree = "<group>";
 		};
-		3D5CA10C2CE640CD0051B53A /* My TripsUITests */ = {
+		3D5CA10C2CE640CD0051B53A /* MyTripsUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "My TripsUITests";
+			path = MyTripsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +72,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D2774152CE7CCFC0010A19E /* MapKit.framework in Frameworks */,
+				3D2774132CE7CCF40010A19E /* CarPlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +94,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D2774112CE7CCF40010A19E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D2774142CE7CCFC0010A19E /* MapKit.framework */,
+				3D2774122CE7CCF40010A19E /* CarPlay.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3D5CA0E32CE640CB0051B53A = {
 			isa = PBXGroup;
 			children = (
-				3D5CA0EE2CE640CB0051B53A /* My Trips */,
-				3D5CA1022CE640CC0051B53A /* My TripsTests */,
-				3D5CA10C2CE640CD0051B53A /* My TripsUITests */,
+				3D5CA0EE2CE640CB0051B53A /* MyTrips */,
+				3D5CA1022CE640CC0051B53A /* MyTripsTests */,
+				3D5CA10C2CE640CD0051B53A /* MyTripsUITests */,
+				3D2774112CE7CCF40010A19E /* Frameworks */,
 				3D5CA0ED2CE640CB0051B53A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,9 +117,9 @@
 		3D5CA0ED2CE640CB0051B53A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3D5CA0EC2CE640CB0051B53A /* My Trips.app */,
-				3D5CA0FF2CE640CC0051B53A /* My TripsTests.xctest */,
-				3D5CA1092CE640CC0051B53A /* My TripsUITests.xctest */,
+				3D5CA0EC2CE640CB0051B53A /* MyTrips.app */,
+				3D5CA0FF2CE640CC0051B53A /* MyTripsTests.xctest */,
+				3D5CA1092CE640CC0051B53A /* MyTripsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,9 +127,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3D5CA0EB2CE640CB0051B53A /* My Trips */ = {
+		3D5CA0EB2CE640CB0051B53A /* MyTrips */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D5CA1132CE640CD0051B53A /* Build configuration list for PBXNativeTarget "My Trips" */;
+			buildConfigurationList = 3D5CA1132CE640CD0051B53A /* Build configuration list for PBXNativeTarget "MyTrips" */;
 			buildPhases = (
 				3D5CA0E82CE640CB0051B53A /* Sources */,
 				3D5CA0E92CE640CB0051B53A /* Frameworks */,
@@ -108,18 +140,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				3D5CA0EE2CE640CB0051B53A /* My Trips */,
+				3D5CA0EE2CE640CB0051B53A /* MyTrips */,
 			);
-			name = "My Trips";
+			name = MyTrips;
 			packageProductDependencies = (
 			);
 			productName = "My Trips";
-			productReference = 3D5CA0EC2CE640CB0051B53A /* My Trips.app */;
+			productReference = 3D5CA0EC2CE640CB0051B53A /* MyTrips.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3D5CA0FE2CE640CC0051B53A /* My TripsTests */ = {
+		3D5CA0FE2CE640CC0051B53A /* MyTripsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D5CA1162CE640CD0051B53A /* Build configuration list for PBXNativeTarget "My TripsTests" */;
+			buildConfigurationList = 3D5CA1162CE640CD0051B53A /* Build configuration list for PBXNativeTarget "MyTripsTests" */;
 			buildPhases = (
 				3D5CA0FB2CE640CC0051B53A /* Sources */,
 				3D5CA0FC2CE640CC0051B53A /* Frameworks */,
@@ -131,18 +163,18 @@
 				3D5CA1012CE640CC0051B53A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				3D5CA1022CE640CC0051B53A /* My TripsTests */,
+				3D5CA1022CE640CC0051B53A /* MyTripsTests */,
 			);
-			name = "My TripsTests";
+			name = MyTripsTests;
 			packageProductDependencies = (
 			);
 			productName = "My TripsTests";
-			productReference = 3D5CA0FF2CE640CC0051B53A /* My TripsTests.xctest */;
+			productReference = 3D5CA0FF2CE640CC0051B53A /* MyTripsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3D5CA1082CE640CC0051B53A /* My TripsUITests */ = {
+		3D5CA1082CE640CC0051B53A /* MyTripsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3D5CA1192CE640CD0051B53A /* Build configuration list for PBXNativeTarget "My TripsUITests" */;
+			buildConfigurationList = 3D5CA1192CE640CD0051B53A /* Build configuration list for PBXNativeTarget "MyTripsUITests" */;
 			buildPhases = (
 				3D5CA1052CE640CC0051B53A /* Sources */,
 				3D5CA1062CE640CC0051B53A /* Frameworks */,
@@ -154,13 +186,13 @@
 				3D5CA10B2CE640CC0051B53A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				3D5CA10C2CE640CD0051B53A /* My TripsUITests */,
+				3D5CA10C2CE640CD0051B53A /* MyTripsUITests */,
 			);
-			name = "My TripsUITests";
+			name = MyTripsUITests;
 			packageProductDependencies = (
 			);
 			productName = "My TripsUITests";
-			productReference = 3D5CA1092CE640CC0051B53A /* My TripsUITests.xctest */;
+			productReference = 3D5CA1092CE640CC0051B53A /* MyTripsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -170,6 +202,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				CLASSPREFIX = GM;
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
@@ -186,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3D5CA0E72CE640CB0051B53A /* Build configuration list for PBXProject "My Trips" */;
+			buildConfigurationList = 3D5CA0E72CE640CB0051B53A /* Build configuration list for PBXProject "MyTrips" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -200,9 +233,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3D5CA0EB2CE640CB0051B53A /* My Trips */,
-				3D5CA0FE2CE640CC0051B53A /* My TripsTests */,
-				3D5CA1082CE640CC0051B53A /* My TripsUITests */,
+				3D5CA0EB2CE640CB0051B53A /* MyTrips */,
+				3D5CA0FE2CE640CC0051B53A /* MyTripsTests */,
+				3D5CA1082CE640CC0051B53A /* MyTripsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -258,12 +291,12 @@
 /* Begin PBXTargetDependency section */
 		3D5CA1012CE640CC0051B53A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D5CA0EB2CE640CB0051B53A /* My Trips */;
+			target = 3D5CA0EB2CE640CB0051B53A /* MyTrips */;
 			targetProxy = 3D5CA1002CE640CC0051B53A /* PBXContainerItemProxy */;
 		};
 		3D5CA10B2CE640CC0051B53A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3D5CA0EB2CE640CB0051B53A /* My Trips */;
+			target = 3D5CA0EB2CE640CB0051B53A /* MyTrips */;
 			targetProxy = 3D5CA10A2CE640CC0051B53A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -388,36 +421,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "My Trips/My_Trips.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME).entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"My Trips/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyTrips/Preview Content\"";
 				DEVELOPMENT_TEAM = RRF7B9FTY3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = "$(PROJECT_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmorixe.My-Trips";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gastonmorixe.mytrips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
@@ -427,36 +453,29 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "My Trips/My_Trips.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/$(PROJECT_NAME)/$(PROJECT_NAME).entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"My Trips/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyTrips/Preview Content\"";
 				DEVELOPMENT_TEAM = RRF7B9FTY3;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
-				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_FILE = "$(PROJECT_NAME)/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gastonmorixe.My-Trips";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gastonmorixe.mytrips;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = 1;
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
@@ -479,7 +498,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Trips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/My Trips";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTrips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyTrips";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
@@ -502,7 +521,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Trips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/My Trips";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyTrips.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MyTrips";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
@@ -554,7 +573,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3D5CA0E72CE640CB0051B53A /* Build configuration list for PBXProject "My Trips" */ = {
+		3D5CA0E72CE640CB0051B53A /* Build configuration list for PBXProject "MyTrips" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D5CA1112CE640CD0051B53A /* Debug */,
@@ -563,7 +582,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D5CA1132CE640CD0051B53A /* Build configuration list for PBXNativeTarget "My Trips" */ = {
+		3D5CA1132CE640CD0051B53A /* Build configuration list for PBXNativeTarget "MyTrips" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D5CA1142CE640CD0051B53A /* Debug */,
@@ -572,7 +591,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D5CA1162CE640CD0051B53A /* Build configuration list for PBXNativeTarget "My TripsTests" */ = {
+		3D5CA1162CE640CD0051B53A /* Build configuration list for PBXNativeTarget "MyTripsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D5CA1172CE640CD0051B53A /* Debug */,
@@ -581,7 +600,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3D5CA1192CE640CD0051B53A /* Build configuration list for PBXNativeTarget "My TripsUITests" */ = {
+		3D5CA1192CE640CD0051B53A /* Build configuration list for PBXNativeTarget "MyTripsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3D5CA11A2CE640CD0051B53A /* Debug */,

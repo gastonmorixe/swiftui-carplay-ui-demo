@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct My_TripsApp: App {
+struct MyTripsApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -25,7 +25,8 @@ struct My_TripsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            // ContentView()
+            CarPlayView()
         }
         .modelContainer(sharedModelContainer)
     }
